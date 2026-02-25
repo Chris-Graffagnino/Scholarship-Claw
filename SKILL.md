@@ -1,3 +1,24 @@
+---
+name: scholarship-manual
+description: Agentic scholarship discovery, evaluation, and application management for prospective college students. Use when a student needs help finding scholarships, filing FAFSA, writing essays, tracking applications, or navigating the full financial aid pipeline.
+disable-model-invocation: true
+---
+
+## Usage
+
+Invoke with `/scholarship-manual [action] [arguments]`
+
+| Action | Arguments | What happens |
+|--------|-----------|--------------|
+| `help` | (none) | Print this usage table |
+| `intake` | Student name | Collect and validate the student profile schema; begin Phase 1 |
+| `search` | (uses stored profile) | Run Phase 3 discovery across all source types |
+| `evaluate` | Scholarship URL | Score for legitimacy via the scam rubric; add to tracker if it passes |
+| `track` | (none) | Display tracker and surface upcoming internal deadlines |
+| `essay` | Essay prompt text | Conduct a structured student interview and produce a draft |
+
+**Current student context (if active):** $ARGUMENTS
+
 # The Definitive Scholarship Manual for Prospective College Students
 
 ## How to Find, Win, and Stack Financial Aid for Higher Education
